@@ -1,0 +1,13 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Composer & Vendor
+/vendor/
+
+# Logs & Temporary files
+*.log
+*.tmp
+scratch/
+test_api*.php
