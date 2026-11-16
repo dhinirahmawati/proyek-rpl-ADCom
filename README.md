@@ -7,13 +7,19 @@ Mata Kuliah: Rekayasa Perangkat Lunak (RPL)
 
 ## 1. Identitas Anggota Kelompok
 
-* **Nomor Kelompok:** [cirtim pride] *(Silakan lengkapi nomor kelompok)*
-* **Daftar Anggota:**
-  1. **[Rauzzan Muhamad Fikri]** — NIM: `[41257152]` *(Ketua Kelompok)*
-  2. **[Dhini Rahmawati]** — NIM: `[41257244]` *(Anggota)*
-  3. **[Sairo]** — NIM: `[41257157]` *(Anggota)*
-  4. **[Niara Aprilia]** — NIM: `[41257145]` *(Anggota)*
-  5. **[Haydar Rahman Al Ghifari]** — NIM: `[41257239]` *(Anggota)*
+| No | Nama Lengkap | NIM | 
+|:--:|:-------------|:---:|:-------------------|
+| 1  | [Rauzzan Muhamad Fikri] | [41257152] |
+| 2  | [Dhini Rahmawati] | [41257244] | 
+| 3  | [Sairo] | [41257157] | 
+| 4  | [Niara Aprilia] | [41257145] |
+| 5  | [Haydar Rahman Al Ghifari] | [41257239] | 
+
+- **Nama Kelompok** : [cirtim pride]
+- **Kelas / Program Studi** : [1C / Teknik Informatika]
+- **Mata Kuliah** : Rekayasa Perangkat Lunak (RPL)
+- **Dosen Pengampu** : [Yudhistira Arie Wijaya, M.Kom]
+- **Tahun Akademik** : 2026/2027
 
 ---
 
