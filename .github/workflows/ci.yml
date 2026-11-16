@@ -1,0 +1,45 @@
+name: ADCom CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Lint & Unit Testing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, curl, pdo, pdo_mysql, json, openssl
+          tools: phpunit
+          coverage: none
+
+      - name: Verify PHP Syntax (Linting)
+        run: |
+          echo "Memeriksa sintaks PHP pada seluruh file aplikasi..."
+          find app tests -name "*.php" -print0 | xargs -0 -n 1 -P 4 php -l
+          php -l run_tests.php
+          php -l migrate.php
+          echo "Pemeriksaan sintaks PHP berhasil lolos."
+
+      - name: Prepare Test Environment
+        run: |
+          cp .env.example .env
+
+      - name: Run Standalone Unit Test Runner
+        run: |
+          php run_tests.php
+
+      - name: Run PHPUnit Test Suite
+        run: |
+          phpunit --testdox
+

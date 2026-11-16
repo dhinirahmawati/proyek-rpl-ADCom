@@ -1,5 +1,7 @@
 # ADCom - Sistem Informasi Manajemen Layanan & Jasa Servis Komputer, Jaringan, dan IT Support
 
+[![ADCom CI/CD Pipeline](https://github.com/dhinirahmawati/proyek-rpl-ADCom/actions/workflows/ci.yml/badge.svg)](https://github.com/dhinirahmawati/proyek-rpl-ADCom/actions/workflows/ci.yml)
+
 Project Tugas Besar / Ujian Akhir Semester (UAS)  
 Mata Kuliah: Rekayasa Perangkat Lunak (RPL)
 
@@ -233,5 +235,44 @@ Seluruh kata sandi (*password*) untuk akun bawaan di bawah ini telah disetel def
 
 ---
 
-## 8. Lisensi & Hak Cipta
+## 8. Otomasi Pengujian & CI/CD (*Continuous Integration / Continuous Deployment*)
+
+Aplikasi ini telah mengadopsi standar pengujian otomatis modern dan *pipeline* CI/CD menggunakan **GitHub Actions**:
+
+### A. Cakupan Pengujian Unit (*Unit Testing Coverage*)
+Pengujian otomatis mencakup 23 test case pada fungsionalitas inti sistem:
+1. **CSRF Protection Test (`tests/Unit/CSRFTest.php`):** Pengujian tokenisasi anti-CSRF 32-byte (64 karakter hex), proteksi sesi, dan validasi request method.
+2. **Environment & Secret Protection Test (`tests/Unit/EnvTest.php`):** Pengujian isolasi file `.env`, pembacaan fallback nilai default, dan fungsi *masking* rahasia API key / token.
+3. **Flasher Notification Test (`tests/Unit/FlasherTest.php`):** Pengujian notifikasi pesan flash sesi, formatting Bootstrap alert, dan pembersihan otomatis sesi setelah render.
+4. **WhatsApp Service & OTP Test (`tests/Unit/WhatsAppServiceTest.php`):** Pengujian simulasi pengiriman OTP, format pesan verifikasi, dan status adapter provider.
+5. **AI Service & Resilience Test (`tests/Unit/AIServiceTest.php`):** Pengujian mekanisme fallback FAQ cerdas, penanganan pertanyaan layanan jasa, alur pemesanan, dan penyaringan topik.
+
+### B. Cara Menjalankan Unit Test Secara Lokal
+Anda dapat menjalankan pengujian unit secara langsung melalui terminal (Command Prompt, PowerShell, atau Git Bash) tanpa perlu menginstal dependensi tambahan:
+
+* **Menggunakan PHP XAMPP (Windows):**
+  ```bash
+  C:\xampp\php\php.exe run_tests.php
+  ```
+  *(Atau jika `php` sudah terdaftar di PATH: `php run_tests.php`)*
+
+* **Menggunakan PHPUnit (jika terpasang):**
+  ```bash
+  phpunit --testdox
+  ```
+
+Hasil pengujian lokal akan menampilkan ringkasan status setiap pengujian (`[PASS]` / `[FAIL]`) dan waktu eksekusi.
+
+### C. Alur Kerja GitHub Actions Pipeline
+Setiap kali ada perubahan kode yang dikirim (*push*) atau diajukan (*pull request*) ke branch `main`, GitHub Actions akan menjalankan alur kerja otomatis (`.github/workflows/ci.yml`):
+1. **Checkout Code:** Mengunduh kode sumber proyek ke runner virtual Ubuntu.
+2. **Setup PHP Environment:** Menyiapkan lingkungan PHP 8.2 beserta ekstensi yang dibutuhkan (`mbstring`, `curl`, `pdo`, `json`, `openssl`).
+3. **Linting (Pemeriksaan Sintaks):** Memeriksa seluruh file PHP untuk memastikan tidak ada kesalahan sintaks (*syntax error*).
+4. **Prepare Test Environment:** Menyiapkan file konfigurasi lingkungan uji coba dari `.env.example`.
+5. **Run Standalone Test Runner:** Menjalankan `php run_tests.php` untuk memvalidasi fungsionalitas aplikasi.
+6. **Run PHPUnit Test Suite:** Menjalankan pengujian berbasis PHPUnit dengan format laporan `--testdox`.
+
+---
+
+## 9. Lisensi & Hak Cipta
 Proyek ini dikembangkan untuk keperluan akademik dan evaluasi Ujian Akhir Semester (UAS) mata kuliah **Rekayasa Perangkat Lunak (RPL)**. Seluruh kode sumber terbuka untuk dipelajari dan dikembangkan lebih lanjut.

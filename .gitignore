@@ -11,3 +11,5 @@
 *.tmp
 scratch/
 test_api*.php
+.phpunit.cache/
+.phpunit.result.cache
