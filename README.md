@@ -7,12 +7,13 @@ Mata Kuliah: Rekayasa Perangkat Lunak (RPL)
 
 ## 1. Identitas Anggota Kelompok
 
-* **Nomor Kelompok:** [Kelompok XX] *(Silakan lengkapi nomor kelompok)*
+* **Nomor Kelompok:** [cirtim pride] *(Silakan lengkapi nomor kelompok)*
 * **Daftar Anggota:**
-  1. **[Nama Lengkap Anggota 1]** — NIM: `[NIM Anggota 1]` *(Ketua Kelompok)*
-  2. **[Nama Lengkap Anggota 2]** — NIM: `[NIM Anggota 2]` *(Anggota)*
-  3. **[Nama Lengkap Anggota 3]** — NIM: `[NIM Anggota 3]` *(Anggota)*
-  4. **[Nama Lengkap Anggota 4]** — NIM: `[NIM Anggota 4]` *(Anggota)*
+  1. **[Rauzzan Muhamad Fikri]** — NIM: `[41257152]` *(Ketua Kelompok)*
+  2. **[Dhini Rahmawati]** — NIM: `[41257244]` *(Anggota)*
+  3. **[Sairo]** — NIM: `[41257157]` *(Anggota)*
+  4. **[Niara Aprilia]** — NIM: `[41257145]` *(Anggota)*
+  5. **[Haydar Rahman Al Ghifari]** — NIM: `[41257239]` *(Anggota)*
 
 ---
 
