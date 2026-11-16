@@ -8,7 +8,7 @@ Mata Kuliah: Rekayasa Perangkat Lunak (RPL)
 ## 1. Identitas Anggota Kelompok
 
 | No | Nama Lengkap | NIM | 
-|:--:|:-------------|:---:|:-------------------|
+|:--:|:-------------|:---:|
 | 1  | [Rauzzan Muhamad Fikri] | [41257152] |
 | 2  | [Dhini Rahmawati] | [41257244] | 
 | 3  | [Sairo] | [41257157] | 
