@@ -122,7 +122,7 @@ Aplikasi mengintegrasikan modul asisten cerdas bernama **ADCom Virtual Assistant
 
 Tautan video presentasi dan demonstrasi alur kerja sistem:
 
-* **Link YouTube:** `[Tempelkan Link Video YouTube Demonstrasi di Sini]` *(Silakan ganti placeholder ini dengan link video demonstrasi kelompok)*
+* **Link YouTube:** `[https://youtu.be/VyRSYExxuro?si=eqfyy6l_8nAOg4dL]` 
 
 ---
 
